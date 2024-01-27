@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault()
     try {
       const response = await fetch("https://aromatic-fork-production.up.railway.app/annonce/getAll", {
-        method: "POST",
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
