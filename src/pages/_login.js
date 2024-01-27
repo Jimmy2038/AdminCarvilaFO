@@ -8,7 +8,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch("https://aromatic-fork-production.up.railway.app/admin", {
+      const response = await fetch("https://aromatic-fork-production.up.railway.app/annonce/valide", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
