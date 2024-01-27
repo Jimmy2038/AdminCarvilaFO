@@ -8,7 +8,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch("http://localhost:8081/admin", {
+      const response = await fetch("https://aromatic-fork-production.up.railway.app/admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
