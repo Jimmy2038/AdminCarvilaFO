@@ -16,7 +16,7 @@ const Login = () => {
         body: JSON.stringify({
           email: email,
           mdp: password,
-        })
+        }),
       });
 
       if (response.ok) {
