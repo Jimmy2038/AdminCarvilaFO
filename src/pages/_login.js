@@ -105,7 +105,7 @@ const Login = () => {
             <button onClick={handleLogin} className="btn btn-lg btn-primary btn-block" type="submit">
               Let me in
             </button>
-            <p className="mt-5 mb-3 text-muted">© 2020</p>
+            <p className="mt-5 mb-3 text-muted">© 2024</p>
           </form>
         </div>
       </div>
