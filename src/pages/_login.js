@@ -10,6 +10,7 @@ const Login = () => {
     try {
       const response = await fetch("https://aromatic-fork-production.up.railway.app/admin", {
          method: "POST",
+        mode: 'no-cors',
         headers: {
           "Content-Type": "application/json",
         },
