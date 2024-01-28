@@ -64,10 +64,7 @@ const ModalEnergy = () => {
             </div>
             <div className="modal-body">
               <form
-                onSubmit={(e) => {
-                 
-                  handleInsert();
-                }}
+
               >
                 <div className="form-group">
                 
@@ -85,7 +82,10 @@ const ModalEnergy = () => {
                   />
                 </div>
                 <div className="modal-footer">
-                  <button type="submit" className="btn mb-2 btn-primary">
+                  <button  onClick={
+                 
+                  handleInsert
+                } type="submit" className="btn mb-2 btn-primary" >
                     Save
                   </button>
                 </div>
