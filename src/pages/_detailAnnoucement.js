@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/_header";
 import Aside from "../components/_aside";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const DetailAnnouncement = () => {
   const div_img = {
@@ -19,6 +19,8 @@ const DetailAnnouncement = () => {
     width: "100%",
     heigth: "100%",
   };
+
+  const navigate = useNavigate();
 
 
   const { idAnnonce } = useParams();
@@ -74,7 +76,7 @@ const DetailAnnouncement = () => {
       console.log(response.data); // Afficher la réponse de la requête si nécessaire
       console.log(annonceData);
       handleLoadAll();
-      window.location.href = "/announcement";
+      navigate("/announcement");
     } catch (error) {
       console.error("Erreur lors de la requête:", error);
     }
