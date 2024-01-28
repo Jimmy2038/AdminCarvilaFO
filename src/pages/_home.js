@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/_header";
-import { Chart as ChartJS } from "chart.js/auto";
+
 import Aside from "../components/_aside";
-import { Bar, Doughnut, Line } from "react-chartjs-2";
+import {  Doughnut} from "react-chartjs-2";
 
 const Home = () => {
   const [data, setData] = useState([]);
