@@ -57,7 +57,7 @@ const Home = () => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      }), []);;
+      });
   
       setDataVente(response.data);
       console.log(dataVente);  // Ajout de ce console.log
@@ -67,7 +67,7 @@ const Home = () => {
         "Erreur lors du chargement des données. Veuillez réessayer plus tard."
       );
     }
-  };
+  }, []);
 
 
 
