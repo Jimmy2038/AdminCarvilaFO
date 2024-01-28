@@ -16,8 +16,8 @@ const Login = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: "admin@gmail.com",
-          mdp: "admin",
+          email: email,
+          mdp: password,
         }),
       });
 
