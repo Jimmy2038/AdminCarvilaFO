@@ -22,7 +22,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await axios.get(`https://aromatic-fork-production.up.railway.app/energie/getById/${idEnergy}`, {
+      const response = await axios.get(`https://carvilla-production.up.railway.app/energie/getById/${idEnergy}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -48,7 +48,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await fetch(`https://aromatic-fork-production.up.railway.app/energie/update/${idEnergy}`, {
+      const response = await fetch(`https://carvilla-production.up.railway.app/energie/update/${idEnergy}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
