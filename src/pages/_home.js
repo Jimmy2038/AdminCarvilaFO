@@ -15,7 +15,7 @@ const Home = () => {
     handleLoadAll();
     handleLoadVente();     
     // console.log(data);
-  }, []);
+  }, [handleLoadVente]);
 
 
   const handleLoadAll = async () => {
