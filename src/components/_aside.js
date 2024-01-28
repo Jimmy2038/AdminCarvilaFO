@@ -1,6 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-
+import { Link } from "react-router-dom";
+const handleLinkClick = (event) => {
+  // Annule le comportement par défaut du lien si l'attribut href est absent
+  if (!event.currentTarget.getAttribute("href")) {
+    event.preventDefault();
+  }
+};
 const Aside = () => {
   return (
     <>
@@ -76,25 +82,53 @@ const Aside = () => {
                 <span className="ml-3 item-text">Crud Manager</span>
               </a>
               <ul className="collapse list-unstyled pl-4 w-100" id="fileman">
-                <a className="nav-link pl-3" href="/energy">
+              <Link
+                  className="nav-link pl-3"
+                  to="/energy"
+                  onClick={handleLinkClick}
+                >
                   <span className="ml-1">Energy</span>
-                </a>
-                <a className="nav-link pl-3" href="/transmission">
+                </Link>
+                
+                <Link
+                  className="nav-link pl-3"
+                  to="/transmission"
+                  onClick={handleLinkClick}
+                >
                   <span className="ml-1">Transmission</span>
-                </a>
-                <a className="nav-link pl-3" href="/mark">
-                  <span className="ml-1">Mark</span>
-                </a>
-                <a className="nav-link pl-3" href="/model">
+                </Link>
+
+                <Link
+                  className="nav-link pl-3"
+                  to="/mark"
+                  onClick={handleLinkClick}
+                >
+                  <span className="ml-1">Marque</span>
+                </Link>
+                
+                <Link
+                  className="nav-link pl-3"
+                  to="/model"
+                  onClick={handleLinkClick}
+                >
                   <span className="ml-1">Model</span>
-                </a>
+                </Link>
+
+                
+                
               </ul>
             </li>
             <li className="nav-item w-100">
-              <a className="nav-link" href="/announcement">
-                <i className="fe fe-file-text fe-16"></i>
-                <span className="ml-3 item-text">Announcement Publish</span>
-              </a>
+            <Link
+                  className="nav-link"
+                  to="/announcement"
+                  onClick={handleLinkClick}
+                >
+                  <i className="fe fe-file-text fe-16"></i>
+                  <span className="ml-3 item-text">Announcement Publish</span>
+                </Link>
+              
+              
             </li>
           </ul>
         </nav>
