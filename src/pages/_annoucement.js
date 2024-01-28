@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/_header";
 import Aside from "../components/_aside";
-
+import {  useNavigate} from "react-router-dom";
 const Announcement = () => {
   const car_img = {
     width: "8rem",
     heigth: "8rem",
   };
+  const navigate = useNavigate();
 
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -54,7 +55,7 @@ const Announcement = () => {
 
   const handleDetailClick = (idAnnonce) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
-    window.location.href = `/detailAnnouncement/${idAnnonce}`;
+    navigate(`/detailAnnouncement/${idAnnonce}`);
   };
 
 
