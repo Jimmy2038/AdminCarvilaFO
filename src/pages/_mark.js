@@ -26,7 +26,7 @@ const Mark = () => {
         return;
       }
 
-      const response = await axios.get("https://aromatic-fork-production.up.railway.app/marque/get", {
+      const response = await axios.get("https://carvilla-production.up.railway.app/marque/get", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
