@@ -72,7 +72,7 @@ const Home = () => {
 
 
   if (data==null || dataVente==null) {
-    error=null;
+    
     return <div>Loading...</div>;
   }
 
