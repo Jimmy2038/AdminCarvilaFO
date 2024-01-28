@@ -69,7 +69,7 @@ useEffect(() => {
     handleLoadAll();
     handleLoadVente();     
     // console.log(data);
-  }, []);
+  }, [handleLoadVente]);
   
   if (data==null || dataVente==null) {
     return <div>Loading...</div>;
