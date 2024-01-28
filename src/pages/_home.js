@@ -2,7 +2,7 @@
 import React, { useEffect, useState  } from "react";
 import axios from "axios";
 import Header from "../components/_header";
-
+import { Chart as ChartJS } from "chart.js/auto";
 import Aside from "../components/_aside";
 import {  Doughnut} from "react-chartjs-2";
 
