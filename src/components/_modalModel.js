@@ -17,7 +17,7 @@ const ModalModel = () => {
         return;
       }
 
-      const response = await fetch("https://aromatic-fork-production.up.railway.app/model/insert", {
+      const response = await fetch("https://carvilla-production.up.railway.app/model/insert", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -50,7 +50,7 @@ const ModalModel = () => {
         return;
       }
 
-      const response = await axios.get("https://aromatic-fork-production.up.railway.app/marque/get", {
+      const response = await axios.get("https://carvilla-production.up.railway.app/marque/get", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
