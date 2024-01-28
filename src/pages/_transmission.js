@@ -5,7 +5,7 @@ import Header from "../components/_header";
 import Aside from "../components/_aside";
 import ModalTransmission from "../components/_modalTransmission";
 import EditTransmission from "../components/_editTransmission";
-
+import { useNavigate  } from "react-router-dom";
 const Transmission = () => {
   const btn_add = {
     float: "right",
@@ -16,7 +16,7 @@ const Transmission = () => {
 
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate();
   const handleLoadAll = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -50,7 +50,7 @@ const Transmission = () => {
 
   const id = (idTransmision) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
-    window.location.href = `/EditTransmission/${idTransmision}`;
+    navigate( `/EditTransmission/${idTransmision}`);
   };
 
   return (
