@@ -5,7 +5,7 @@ import Header from "../components/_header";
 import Aside from "../components/_aside";
 import ModalEnergy from "../components/_modalEnergy";
 import EditEnergy from "../components/_editEnergy";
-
+import { useNavigate  } from "react-router-dom";
 const Energy = () => {
   const btn_add = {
     float: "right",
@@ -15,6 +15,7 @@ const Energy = () => {
   };
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleLoadAll = async () => {
     try {
@@ -47,7 +48,8 @@ const Energy = () => {
 
   const id = (idEnergy) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
-    window.location.href = `/EditEnergy/${idEnergy}`;
+    // window.location.href = `/EditEnergy/${idEnergy}`;
+    navigate(`/EditEnergy/${idEnergy}`) ;
   };
 
   return (
