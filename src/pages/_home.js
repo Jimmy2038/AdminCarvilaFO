@@ -43,7 +43,7 @@ const Home = () => {
     }
   };
 
-  const handleLoadVente = async () => {
+  const handleLoadVente = useCallback(async () => {
     try {
       const token = localStorage.getItem("token");
   
@@ -56,7 +56,7 @@ const Home = () => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });
+      }), []);;
   
       setDataVente(response.data);
       console.log(dataVente);  // Ajout de ce console.log
