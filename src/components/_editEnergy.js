@@ -12,6 +12,7 @@ const EditEnergy = () => {
     const [name, setName] = useState("");
     const [error, setError] = useState(null);
   const handleLoadAll = async () => {
+    
     try {
       const token = localStorage.getItem("token");
 
@@ -35,7 +36,8 @@ const EditEnergy = () => {
     }
   };
 
-  const handleEdit = async () => {
+  const handleEdit = async (e) => {
+    e.preventDefault();
     try {
       const token = localStorage.getItem("token");
 
@@ -90,10 +92,7 @@ const EditEnergy = () => {
                     </strong>
                     </div>
                     <div className="chartbox mr-4" >
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            handleEdit();
-                            }}>
+                        <form >
                             <div className="form-group">
                             <label htmlFor="recipient-name" className="col-form-label">
                                 Name
@@ -109,7 +108,9 @@ const EditEnergy = () => {
                             />
                             </div>
                             <div className="modal-footer">
-                            <button type="submit" className="btn mb-2 btn-primary" >
+                            <button onClick={(e) => {
+                            handleEdit(e);
+                            }}  className="btn mb-2 btn-primary" >
                                 Save
                             </button>
                             </div>
