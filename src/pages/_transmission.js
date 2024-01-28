@@ -27,7 +27,7 @@ const Transmission = () => {
       }
 
       const response = await axios.get(
-        "https://aromatic-fork-production.up.railway.app/transmission/getAll",
+        "https://carvilla-production.up.railway.app/transmission/getAll",
         {
           headers: {
             Authorization: `Bearer ${token}`,
