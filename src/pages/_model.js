@@ -5,7 +5,7 @@ import axios from "axios";
 import Header from "../components/_header";
 import Aside from "../components/_aside";
 import ModalModel from "../components/_modalModel";
-import { useParams } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import EditModel from "../components/_editModel";
 
 const Model = () => {
@@ -17,7 +17,7 @@ const Model = () => {
   };
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate();
   const handleLoadAll = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -51,7 +51,7 @@ const Model = () => {
 
   const id = (idModel) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
-    window.location.href = `/EditModel/${idModel}`;
+    navigate(`/EditModel/${idModel}`);
   };
   return (
     <>
