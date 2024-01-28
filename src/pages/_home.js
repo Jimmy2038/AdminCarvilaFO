@@ -68,7 +68,7 @@ const Home = () => {
     handleLoadAll();
     handleLoadVente();     
     // console.log(data);
-  }, [handleLoadVente,handleLoadAll]);
+  }, [handleLoadVente]);
 
   if (data==null || dataVente==null) {
     return <div>Loading...</div>;
