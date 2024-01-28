@@ -4,13 +4,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./_header";
 import Aside from "./_aside";
-import { useParams } from "react-router-dom";
+import { useParams , useNavigate} from "react-router-dom";
 
 const EditEnergy = () => {
     const { idEnergy } = useParams();
     const [energy, setEnergy] = useState(null);
     const [name, setName] = useState("");
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
+
   const handleLoadAll = async () => {
     
     try {
@@ -59,7 +61,7 @@ const EditEnergy = () => {
       });
 
     //   console.log("Réponse du serveur:", response.data);
-      window.location.href = "/energy";
+      navigate("/energy");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
