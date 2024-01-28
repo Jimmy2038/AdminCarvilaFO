@@ -37,6 +37,7 @@ const Home = () => {
       setData(response.data);
     } catch (error) {
       console.error("Erreur lors de la requête:", error);
+      
       setError(
         "Erreur lors du chargement des données. Veuillez réessayer plus tard."
       );
@@ -71,6 +72,7 @@ const Home = () => {
 
 
   if (data==null || dataVente==null) {
+    error=null;
     return <div>Loading...</div>;
   }
 
