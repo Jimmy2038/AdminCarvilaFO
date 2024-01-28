@@ -27,7 +27,7 @@ const Home = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:8081/ByMarque", {
+      const response = await axios.get("https://aromatic-fork-production.up.railway.app/ByMarque", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ const Home = () => {
         return;
       }
   
-      const response = await axios.get("http://localhost:8081/vente", {
+      const response = await axios.get("https://aromatic-fork-production.up.railway.app/vente", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
