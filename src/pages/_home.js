@@ -40,36 +40,36 @@ const Home = () => {
     }
   };
 
-  const handleLoadVente = async () => {
-    try {
-      const token = localStorage.getItem("token");
+  // const handleLoadVente = async () => {
+  //   try {
+  //     const token = localStorage.getItem("token");
   
-      if (!token) {
-        setError("Token d'autorisation manquant. Veuillez vous connecter.");
-        return;
-      }
+  //     if (!token) {
+  //       setError("Token d'autorisation manquant. Veuillez vous connecter.");
+  //       return;
+  //     }
   
-      const response = await axios.get("https://aromatic-fork-production.up.railway.app/vente", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+  //     const response = await axios.get("https://aromatic-fork-production.up.railway.app/vente", {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     });
   
-      setDataVente(response.data);
-      console.log(dataVente);  // Ajout de ce console.log
-    } catch (error) {
-      console.error("Erreur lors de la requête:", error);
-      setError(
-        "Erreur lors du chargement des données. Veuillez réessayer plus tard."
-      );
-    }
-  };
+  //     setDataVente(response.data);
+  //     console.log(dataVente);  // Ajout de ce console.log
+  //   } catch (error) {
+  //     console.error("Erreur lors de la requête:", error);
+  //     setError(
+  //       "Erreur lors du chargement des données. Veuillez réessayer plus tard."
+  //     );
+  //   }
+  // };
 
 useEffect(() => {
     handleLoadAll();
-    handleLoadVente();     
+    // handleLoadVente();     
     // console.log(data);
-  }, [handleLoadVente]);
+  }, []);
   
   if (data==null || dataVente==null) {
     return <div>Loading...</div>;
@@ -130,8 +130,9 @@ useEffect(() => {
                               {
                                 
                                 data: [
-                                   dataVente[1].pourcentage
-                                   ,dataVente[0].pourcentage
+                                  1,2
+                                   // dataVente[1].pourcentage
+                                   // ,dataVente[0].pourcentage
                                 ],
                                 backgroundColor:[
                                   "#008000",
