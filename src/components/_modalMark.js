@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import {  useNavigate} from "react-router-dom";
 
 const ModalMark = () => {
   const [name, setName] = useState("");
 
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleInsert = async () => {
     try {
@@ -27,7 +29,7 @@ const ModalMark = () => {
       });
 
       console.log("Réponse du serveur:", response.data);
-      window.location.href = "/mark";
+      navigate("/home");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
@@ -61,12 +63,7 @@ const ModalMark = () => {
               </button>
             </div>
             <div className="modal-body">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleInsert();
-                }}
-              >
+              <form>
                 <div className="form-group">
                   <label htmlFor="recipient-name" className="col-form-label">
                     Name
@@ -82,7 +79,7 @@ const ModalMark = () => {
                   />
                 </div>
                 <div className="modal-footer">
-                  <button type="submit" className="btn mb-2 btn-primary">
+                  <button onClick={handleInsert} type="submit" className="btn mb-2 btn-primary" data-dismiss="modal">
                     Save
                   </button>
                 </div>
