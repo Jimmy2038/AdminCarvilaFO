@@ -2,16 +2,22 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/_header";
-import Aside from "../components/_aside";
-// eslint-disable-next-line no-unused-vars
 import { Chart as ChartJS } from "chart.js/auto";
-// eslint-disable-next-line no-unused-vars
+import Aside from "../components/_aside";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 
 const Home = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [dataVente, setDataVente] = useState(null);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    handleLoadAll();
+    handleLoadVente();     
+    // console.log(data);
+  }, []);
+
+
   const handleLoadAll = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -21,12 +27,14 @@ const Home = () => {
         return;
       }
 
-      const response = await axios.get("https://aromatic-fork-production.up.railway.app/ByMarque", {
+      const response = await axios.get("http://localhost:8081/ByMarque", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
 
+
+      // console.log(response.data);
       setData(response.data);
     } catch (error) {
       console.error("Erreur lors de la requête:", error);
@@ -45,14 +53,14 @@ const Home = () => {
         return;
       }
   
-      const response = await axios.get("https://aromatic-fork-production.up.railway.app/vente", {
+      const response = await axios.get("http://localhost:8081/vente", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
   
       setDataVente(response.data);
-      // console.log(response.data);  // Ajout de ce console.log
+      console.log(dataVente);  // Ajout de ce console.log
     } catch (error) {
       console.error("Erreur lors de la requête:", error);
       setError(
@@ -61,13 +69,8 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    handleLoadAll();
-    handleLoadVente();     
-    // console.log(data);
-  }, []);
 
-  if (data==null && dataVente==null) {
+  if (data==null || dataVente==null) {
     return <div>Loading...</div>;
   }
 
