@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState ,useCallback } from "react";
+import React, { useEffect, useState  } from "react";
 import axios from "axios";
 import Header from "../components/_header";
 
@@ -15,7 +15,7 @@ const Home = () => {
     handleLoadAll();
     handleLoadVente();     
     // console.log(data);
-  }, [handleLoadVente]);
+  });
 
   const handleLoadAll = async () => {
     try {
@@ -44,7 +44,7 @@ const Home = () => {
     }
   };
 
-  const handleLoadVente = useCallback(async () => {
+  const handleLoadVente = async () => {
     try {
       const token = localStorage.getItem("token");
   
@@ -67,7 +67,7 @@ const Home = () => {
         "Erreur lors du chargement des données. Veuillez réessayer plus tard."
       );
     }
-  }, []);
+  };
 
 
 
@@ -240,6 +240,7 @@ const Home = () => {
           </div>
         </div>
       </main>
+            {error}
     </>
   );
 };
