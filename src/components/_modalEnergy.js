@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {  useNavigate} from "react-router-dom";
+
 const ModalEnergy = () => {
   const [name, setName] = useState("");
 
   const [error, setError] = useState(null);
-
+  const navigate = useNavigate();
   const handleInsert = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -27,7 +29,7 @@ const ModalEnergy = () => {
       });
 
       console.log("Réponse du serveur:", response.data);
-      window.location.href = "/energy";
+      navigate("/energy");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
