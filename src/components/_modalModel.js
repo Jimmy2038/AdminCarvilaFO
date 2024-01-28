@@ -32,7 +32,7 @@ const ModalModel = () => {
       });
 
       console.log("Réponse du serveur:", response.data);
-      navigate("/model");
+      navigate("/home");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
