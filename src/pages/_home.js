@@ -11,7 +11,11 @@ const Home = () => {
   const [dataVente, setDataVente] = useState(null);
   const [error, setError] = useState(null);
 
-
+  useEffect(() => {
+    handleLoadAll();
+    handleLoadVente();     
+    // console.log(data);
+  }, [handleLoadVente]);
 
   const handleLoadAll = async () => {
     try {
@@ -64,11 +68,7 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    handleLoadAll();
-    handleLoadVente();     
-    // console.log(data);
-  }, [handleLoadVente]);
+
 
   if (data==null || dataVente==null) {
     return <div>Loading...</div>;
