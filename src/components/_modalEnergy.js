@@ -29,7 +29,7 @@ const ModalEnergy = () => {
       });
 
       console.log("Réponse du serveur:", response.data);
-      navigate("/energy");
+      navigate("/energie");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
@@ -65,7 +65,7 @@ const ModalEnergy = () => {
             <div className="modal-body">
               <form
                 onSubmit={(e) => {
-                  e.preventDefault();
+                 
                   handleInsert();
                 }}
               >
