@@ -131,7 +131,7 @@ const DetailAnnouncement = () => {
                       <button className="btn btn-outline-success mr-2" onClick={() => handleValid(annonceData.idAnnonce)}>
                         Accept
                       </button>
-                      <button className="btn btn-outline-danger">Refuse</button>
+                      
                     </div>
                   </div>
                 </div>
