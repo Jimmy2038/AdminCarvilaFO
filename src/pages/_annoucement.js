@@ -83,7 +83,7 @@ const Announcement = () => {
                     <thead>
                       <tr>
                         <th>Car Picture</th>
-                        <th>Owner</th>
+                        <th>Mark</th>
                         <th>Car Model</th>
                         <th>Car Year</th>
                         <th>Announcement Date</th>
@@ -112,7 +112,7 @@ const Announcement = () => {
                               {/* <strong>{announcement.utilisateur.pseudo}</strong> */}
                             </p>
                             <small className="mb-0 text-muted">
-                              {announcement.idUtilisateur}
+                              {announcement.model.marque.nomMarque}
                             </small>
                           </td>
                           <td>
