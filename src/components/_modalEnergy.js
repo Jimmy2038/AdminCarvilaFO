@@ -29,7 +29,7 @@ const ModalEnergy = () => {
       });
 
       console.log("Réponse du serveur:", response.data);
-      navigate("/energie");
+      navigate("/home");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
@@ -85,7 +85,7 @@ const ModalEnergy = () => {
                   <button  onClick={
                  
                   handleInsert
-                } type="submit" className="btn mb-2 btn-primary" >
+                } type="submit" className="btn mb-2 btn-primary" data-dismiss="modal">
                     Save
                   </button>
                 </div>
