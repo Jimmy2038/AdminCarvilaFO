@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
+import { Redirect } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("admin@gmail.com");
   const [password, setPassword] = useState("admin");
   const [error, setError] = useState(null);
+  const [redirectToHome, setRedirectToHome] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -28,8 +29,8 @@ const Login = () => {
           window.location.href = "/";
         } else {
           localStorage.setItem("token", token);
-
-          window.location.href = "/home";
+          setRedirectToHome(true);
+          
         }
       } else {
         console.log("huhuhuhhu");
@@ -42,6 +43,12 @@ const Login = () => {
       setError("Erreur d'authentification. Veuillez réessayer plus tard.");
     }
   };
+
+  useEffect(() => {
+    if (redirectToHome) {
+      return <Redirect to="/home" />;
+    }
+  }, [redirectToHome]);
 
   return (
     <>
