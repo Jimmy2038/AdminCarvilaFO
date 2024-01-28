@@ -5,7 +5,7 @@ import Header from "../components/_header";
 import Aside from "../components/_aside";
 import ModalMark from "../components/_modalMark";
 import EditMark from "../components/_editMark";
-
+import { useNavigate  } from "react-router-dom";
 const Mark = () => {
   const btn_add = {
     float: "right",
@@ -13,7 +13,7 @@ const Mark = () => {
   const table = {
     padding: "5rem 5rem",
   };
-
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
@@ -46,7 +46,7 @@ const Mark = () => {
 
   const id = (idMark) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
-    window.location.href = `/EditMark/${idMark}`;
+    navigate(`/EditMark/${idMark}`);
   };
   return (
     <>
