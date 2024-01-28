@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import React, { useEffect,useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("admin@gmail.com");
   const [password, setPassword] = useState("admin");
   const [error, setError] = useState(null);
-  const [redirectToHome, setRedirectToHome] = useState(false);
+  // const [redirectToHome, setRedirectToHome] = useState(false);
 
+  const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
@@ -29,8 +30,8 @@ const Login = () => {
           window.location.href = "/";
         } else {
           localStorage.setItem("token", token);
-          setRedirectToHome(true);
-          
+          // setRedirectToHome(true);
+          navigate("/home");
         }
       } else {
         console.log("huhuhuhhu");
@@ -44,12 +45,7 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    if (redirectToHome) {
-      return <Redirect to="/home" />;
-    }
-  }, [redirectToHome]);
-
+  
   return (
     <>
       <div className="wrapper vh-100">
