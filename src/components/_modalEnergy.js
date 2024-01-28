@@ -15,7 +15,7 @@ const ModalEnergy = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:8081/energie/insert", {
+      const response = await fetch("https://aromatic-fork-production.up.railway.app/energie/insert", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

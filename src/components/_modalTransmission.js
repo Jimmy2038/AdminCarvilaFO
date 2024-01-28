@@ -16,7 +16,7 @@ const ModalTransmission = () => {
       }
 
       const response = await fetch(
-        "http://localhost:8081/transmission/insert",
+        "https://aromatic-fork-production.up.railway.app/transmission/insert",
         {
           method: "POST",
           headers: {

@@ -23,7 +23,7 @@ const Announcement = () => {
         return;
       }
 
-      const url = `http://localhost:8081/annonce/getNonValide`;
+      const url = `https://aromatic-fork-production.up.railway.app/annonce/getNonValide`;
 
       const response = await axios.get(url, {
         headers: {

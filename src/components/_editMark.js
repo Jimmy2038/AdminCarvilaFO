@@ -19,7 +19,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:8081/marque/get/${idMark}`, {
+      const response = await axios.get(`https://aromatic-fork-production.up.railway.app/marque/get/${idMark}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:8081/marque/update/${idMark}`, {
+      const response = await fetch(`https://aromatic-fork-production.up.railway.app/marque/update/${idMark}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -33,7 +33,7 @@ const DetailAnnouncement = () => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:8081/annonce/getByIdAnnonce/${idAnnonce}`, {
+      const response = await axios.get(`https://aromatic-fork-production.up.railway.app/annonce/getByIdAnnonce/${idAnnonce}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ const DetailAnnouncement = () => {
         return;
       }
   
-      const response = await axios.put(`http://localhost:8081/annonce/valide/${idAnnonce}`, null, {
+      const response = await axios.put(`https://aromatic-fork-production.up.railway.app/annonce/valide/${idAnnonce}`, null, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

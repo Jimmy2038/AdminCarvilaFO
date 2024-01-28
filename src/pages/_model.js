@@ -27,7 +27,7 @@ const Model = () => {
         return;
       }
 
-      const url = `http://localhost:8081/model/get`;
+      const url = `https://aromatic-fork-production.up.railway.app/model/get`;
 
       const response = await axios.get(url, {
         headers: {

@@ -19,7 +19,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:8081/transmission/getById/${idTransmission}`, {
+      const response = await axios.get(`https://aromatic-fork-production.up.railway.app/transmission/getById/${idTransmission}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:8081/transmission/update/${idTransmission}`, {
+      const response = await fetch(`https://aromatic-fork-production.up.railway.app/transmission/update/${idTransmission}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,

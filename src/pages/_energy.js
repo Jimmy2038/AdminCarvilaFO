@@ -25,7 +25,7 @@ const Energy = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:8081/energie/getAll", {
+      const response = await axios.get("https://aromatic-fork-production.up.railway.app/energie/getAll", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
