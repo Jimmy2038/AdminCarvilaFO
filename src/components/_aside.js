@@ -60,9 +60,14 @@ const Aside = () => {
               </a>
               <ul className="collapse list-unstyled pl-4 w-100" id="dashboard">
                 <li className="nav-item active">
-                  <a className="nav-link pl-3" href="/home">
-                    <span className="ml-1 item-text">Home</span>
-                  </a>
+                <Link
+                  className="ml-1"
+                  to="/home"
+                  onClick={handleLinkClick}
+                >
+                  <span className="ml-1">Home</span>
+                </Link>
+
                 </li>
               </ul>
             </li>
