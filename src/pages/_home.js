@@ -119,32 +119,32 @@ const Home = () => {
                           Car sales statistics
                         </strong>
                       </div>
-                      <div className="chartbox mr-4" >
+  {/*<div className="chartbox mr-4" >
                       
-                        // <Doughnut
-                        //   data={{
-                        //     labels: [
-                        //       "Car sold (%)" ,
-                        //       "Car not sold (%)",
-                        //     ],
-                        //     datasets: [
-                        //       {
+                        <Doughnut
+                          data={{
+                            labels: [
+                              "Car sold (%)" ,
+                              "Car not sold (%)",
+                            ],
+                            datasets: [
+                              {
                                 
-                        //         data: [
-                        //            dataVente[1].pourcentage
-                        //            ,dataVente[0].pourcentage
-                        //         ],
-                        //         backgroundColor:[
-                        //           "#008000",
-                        //           "#FF3030",
-                        //         ],
+                                data: [
+                                   dataVente[1].pourcentage
+                                   ,dataVente[0].pourcentage
+                                ],
+                                backgroundColor:[
+                                  "#008000",
+                                  "#FF3030",
+                                ],
                                 
-                        //       },
-                        //     ],
-                        //   }}
-                        // />
+                              },
+                            ],
+                          }}
+                        />
                        
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
