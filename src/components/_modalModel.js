@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { useNavigate  } from "react-router-dom";
 const ModalModel = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [name, setName] = useState("");
   const [idMarque, setIdMarque] = useState("");
+  const navigate = useNavigate();
   const handleInsert = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -31,7 +32,7 @@ const ModalModel = () => {
       });
 
       console.log("Réponse du serveur:", response.data);
-      window.location.href = "/model";
+      navigate("/model");
     } catch (error) {
       console.error("Erreur lors de la requête d'insertion:", error);
       setError(
@@ -92,12 +93,7 @@ const ModalModel = () => {
               </button>
             </div>
             <div className="modal-body">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleInsert();
-                }}
-              >
+              <form>
                 <div className="form-group">
                   <label htmlFor="recipient-name" className="col-form-label">
                     Model Name
@@ -133,7 +129,7 @@ const ModalModel = () => {
                   </select>
                 </div>
                 <div className="modal-footer">
-                  <button type="submit" className="btn mb-2 btn-primary">
+                  <button onClick={handleInsert} type="submit" className="btn mb-2 btn-primary " data-dismiss="modal">
                     Save
                   </button>
                 </div>
