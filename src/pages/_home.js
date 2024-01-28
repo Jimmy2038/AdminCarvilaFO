@@ -119,7 +119,7 @@ const Home = () => {
                           Car sales statistics
                         </strong>
                       </div>
-  {/*<div className="chartbox mr-4" >
+              <div className="chartbox mr-4" >
                       
                         <Doughnut
                           data={{
@@ -144,7 +144,7 @@ const Home = () => {
                           }}
                         />
                        
-                      </div> */}
+                      </div> 
                     </div>
                   </div>
                 </div>
