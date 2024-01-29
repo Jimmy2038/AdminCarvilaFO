@@ -49,9 +49,12 @@ const Announcement = () => {
   }, []);
 
   const formatDate = (dateArray) => {
-    const formattedDate = new Date(...dateArray).toLocaleDateString();
+    
+  const [year, month, day] = dateArray;
+  const formattedDate = new Date(year, month - 1, day);
     return formattedDate;
   };
+
 
   const handleDetailClick = (idAnnonce) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
@@ -126,7 +129,7 @@ const Announcement = () => {
                             </p>
                           </td>
                           <td className="text-muted">
-                            {announcement.daty}
+                            {formatDate(announcement.daty)}
                           </td>
                           <td>
                             <p className="mb-0 text-muted">
