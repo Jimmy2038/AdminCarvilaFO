@@ -152,7 +152,7 @@ const DetailAnnouncement = () => {
                         </div>
                         <div className="col pr-0">
                           <p className="small text-muted mb-0">Energy</p>
-                          <span className="h3 mb-0">{annonceData.model.nomModel}</span>
+                          <span className="h3 mb-0">{annonceData.energie.nomEnergie}</span>
                         </div>
                       </div>
                     </div>
