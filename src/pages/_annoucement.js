@@ -50,8 +50,8 @@ const Announcement = () => {
 
   const formatDate = (dateArray) => {
     
-  const [year, month, day] = dateArray;
-  const formattedDate = new Date(year, month - 1, day);
+ const [year, month, day] = dateArray.slice(0, 3); 
+const formattedDate = new Date(year, month - 1, day);
     return formattedDate;
   };
 
