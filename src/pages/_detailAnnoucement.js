@@ -193,7 +193,7 @@ const DetailAnnouncement = () => {
                           </span>
                         </div>
                         <div className="col">
-                          <p className="small text-muted mb-0">Mileage</p>
+                          <p className="small text-muted mb-0">Kilometrage</p>
                           <div className="row align-items-center no-gutters">
                             <div className="col-auto">
                               <span className="h3 mr-2 mb-0">{annonceData.kilometrage}  Km </span>
