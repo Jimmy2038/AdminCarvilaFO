@@ -48,17 +48,17 @@ const Announcement = () => {
     handleLoadAll();
   }, []);
 
-//   const formatDate = (dateArray) => {
-    
-//  const [year, month, day] = dateArray.slice(0, 3); 
-// const formattedDate = new Date(year, month - 1, day);
-//     return formattedDate;
-//   };
-
   const formatDate = (dateArray) => {
-    const formattedDate = new Date(...dateArray).toLocaleDateString();
+    
+ const [year, month, day] = dateArray.slice(0, 3); 
+const formattedDate = new Date(year, month - 1, day).toLocaleDateString();
     return formattedDate;
   };
+
+  // const formatDate = (dateArray) => {
+  //   const formattedDate = new Date(...dateArray).toLocaleDateString();
+  //   return formattedDate;
+  // };
   const handleDetailClick = (idAnnonce) => {
     // Rediriger l'utilisateur vers la page de détail avec l'ID de l'annonce
     navigate(`/detailAnnouncement/${idAnnonce}`);
