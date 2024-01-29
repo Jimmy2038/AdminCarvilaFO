@@ -126,7 +126,7 @@ const Announcement = () => {
                             </p>
                           </td>
                           <td className="text-muted">
-                            {formatDate(announcement.daty)}
+                            {announcement.daty}
                           </td>
                           <td>
                             <p className="mb-0 text-muted">
