@@ -20,7 +20,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await axios.get(`https://carvilla-production.up.railway.app/marque/get/${idMark}`, {
+      const response = await axios.get(`https://springboot-production-1101.up.railway.app/marque/get/${idMark}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ const EditEnergy = () => {
         return;
       }
 
-      const response = await fetch(`https://carvilla-production.up.railway.app/marque/update/${idMark}`, {
+      const response = await fetch(`https://springboot-production-1101.up.railway.app/marque/update/${idMark}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
