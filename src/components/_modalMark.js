@@ -17,7 +17,7 @@ const ModalMark = () => {
         return;
       }
 
-      const response = await fetch("https://carvilla-production.up.railway.app/marque/insert", {
+      const response = await fetch("https://springboot-production-1101.up.railway.app/marque/insert", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
