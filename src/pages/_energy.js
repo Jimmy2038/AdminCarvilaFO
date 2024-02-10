@@ -26,7 +26,7 @@ const Energy = () => {
         return;
       }
 
-      const response = await axios.get("https://carvilla-production.up.railway.app/energie/getAll", {
+      const response = await axios.get("https://springboot-production-1101.up.railway.app/energie/getAll", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
