@@ -17,7 +17,7 @@ const ModalTransmission = () => {
       }
 
       const response = await fetch(
-        "https://carvilla-production.up.railway.app/transmission/insert",
+        "https://springboot-production-1101.up.railway.app/transmission/insert",
         {
           method: "POST",
           headers: {
