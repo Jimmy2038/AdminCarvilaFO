@@ -27,7 +27,7 @@ const Transmission = () => {
       }
 
       const response = await axios.get(
-        "https://carvilla-production.up.railway.app/transmission/getAll",
+        "https://springboot-production-1101.up.railway.app/transmission/getAll",
         {
           headers: {
             Authorization: `Bearer ${token}`,
