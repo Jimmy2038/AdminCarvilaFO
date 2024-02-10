@@ -27,7 +27,7 @@ const Model = () => {
         return;
       }
 
-      const url = `https://carvilla-production.up.railway.app/model/get`;
+      const url = `https://springboot-production-1101.up.railway.app/model/get`;
 
       const response = await axios.get(url, {
         headers: {
