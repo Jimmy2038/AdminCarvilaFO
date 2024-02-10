@@ -35,7 +35,7 @@ const DetailAnnouncement = () => {
         return;
       }
 
-      const response = await axios.get(`https://carvilla-production.up.railway.app/annonce/getByIdAnnonce/${idAnnonce}`, {
+      const response = await axios.get(`https://springboot-production-1101.up.railway.app/annonce/getByIdAnnonce/${idAnnonce}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ const DetailAnnouncement = () => {
         return;
       }
   
-      const response = await axios.put(`https://carvilla-production.up.railway.app/annonce/valide/${idAnnonce}`, null, {
+      const response = await axios.put(`https://springboot-production-1101.up.railway.app/annonce/valide/${idAnnonce}`, null, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
