@@ -17,7 +17,7 @@ const ModalEnergy = () => {
         return;
       }
 
-      const response = await fetch("https://carvilla-production.up.railway.app/energie/insert", {
+      const response = await fetch("https://springboot-production-1101.up.railway.app/energie/insert", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
