@@ -24,7 +24,7 @@ const Announcement = () => {
         return;
       }
 
-      const url = `https://carvilla-production.up.railway.app/annonce/getNonValide`;
+      const url = `https://springboot-production-1101.up.railway.app/annonce/getNonValide`;
 
       const response = await axios.get(url, {
         headers: {
